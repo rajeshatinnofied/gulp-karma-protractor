@@ -3,10 +3,10 @@
 
     angular
         .module('newtestproject')
-        .controller('UserController', MainController);
+        .controller('UserController', UserController);
 
     /** @ngInject */
-    function MainController($state, userId) {
+    function UserController($state, userId) {
         var vm = this;
 
         vm.userName = userId;
