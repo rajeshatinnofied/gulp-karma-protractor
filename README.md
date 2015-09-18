@@ -8,3 +8,5 @@ for unit test and protractor for e2e test.
   - for start unit test with karma
 * gulp protractor
   - for start protractor to start e2e test
+* gulp serve
+  - for start server and serve files on browser with browser-sync
