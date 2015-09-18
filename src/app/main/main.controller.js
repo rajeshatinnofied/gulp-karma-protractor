@@ -6,11 +6,17 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController() {
+    function MainController($state) {
         var vm = this;
-
-        vm.awesomeThings = [1, 2, 3, 4, 5];
-        vm.classAnimation = '';
-        vm.creationDate = 1442464093282;
+        vm.user = {};
+        vm.doLogin = function() {
+            if (vm.user.name === 'admin' && vm.user.password === 'password') {
+                $state.go('home', {
+                    userId: vm.user.name || 'unknown'
+                });
+            } else {
+                $state.go('login');
+            }
+        };
     }
 })();

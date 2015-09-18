@@ -6,10 +6,11 @@
 'use strict';
 
 var MainPage = function() {
-    this.jumbEl = element(by.css('.jumbotron'));
-    this.h1El = this.jumbEl.element(by.css('h1'));
-    this.imgEl = this.jumbEl.element(by.css('img'));
-    this.thumbnailEls = element(by.css('body')).all(by.repeater('x in vm.awesomeThings'));
+    this.userName = element(by.model('vm.user.name'));
+    this.userPass = element(by.model('vm.user.password'));
+    this.submitButton = element(by.buttonText('Submit'));
+    this.resetButton = element(by.buttonText('Reset'));
 };
+
 
 module.exports = new MainPage();
