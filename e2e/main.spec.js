@@ -6,6 +6,7 @@ describe('The main view', function() {
     beforeEach(function() {
         browser.get('/index.html');
         page = require('./main.po');
+        browser.driver.manage().window().setSize(1280, 760);
     });
 
     it('should include a user name filed', function() {
