@@ -10,6 +10,7 @@
         var vm = this;
 
         vm.userName = userId;
+        vm.userInfo = {};
         vm.userDetails = {};
         vm.doLogout = function() {
             $state.go('login');
