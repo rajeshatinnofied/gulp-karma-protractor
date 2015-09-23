@@ -33,6 +33,11 @@ describe('The main view', function() {
         expect(userPage.userText.getText()).toBe('Welcome admin');
         userPage.userDetails.sendKeys('hello this is some details user');
         expect(userPage.userDetails.getAttribute('value')).toBe('hello this is some details user');
+        
+        userPage.loadJokesButton.click();
+        expect(userPage.jokes.count()).toBe(3);
+            
+        
         userPage.logoutButton.click();
         expect(browser.getLocationAbsUrl()).toMatch('/login');
     });
